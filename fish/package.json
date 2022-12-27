@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "tap-colorize": "^1.2.0"
+  },
+  "private": true
+}
