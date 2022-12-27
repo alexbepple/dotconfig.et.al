@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
+    "json": "^11.0.0"
+  }
+}

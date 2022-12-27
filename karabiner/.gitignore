@@ -1,0 +1,5 @@
+assets/
+automatic_backups/
+node_modules/
+.idea/
+temp/
