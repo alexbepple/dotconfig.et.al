@@ -1,0 +1,23 @@
+[directory]
+truncation_symbol = "…/"
+
+[aws]
+disabled = true
+
+[custom.spack]
+symbol = " "
+style = "bold blue" # like Nix-shell
+command = "echo 'spack'"
+files = ["spack.yaml"]
+format = "via [$symbol$output]($style)"
+
+[custom.asdf_active]
+when = """ test "$ASDF_DIR" && test -f .tool-versions """
+style = "bold blue" # like Nix-shell
+format = "  via [ asdf ]($style)"
+
+[custom.asdf_inactive]
+when = """ test -z "$ASDF_DIR" && test -f .tool-versions """
+style = "bold red" # indicate likely error
+format = "  [ .tool-versions]($style) defined but not used"
+
