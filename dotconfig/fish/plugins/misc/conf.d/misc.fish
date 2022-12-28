@@ -1,7 +1,7 @@
 # set -x LANG en_US.utf8
 # set -x LC_ALL C
 
-eval (/opt/homebrew/bin/brew shellenv)
+test -d /opt/homebrew && eval (/opt/homebrew/bin/brew shellenv)
 
 # do I even need these anymore?
 set --prepend PATH /usr/local/bin
