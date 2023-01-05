@@ -32,6 +32,7 @@ abbr o open
 set -x LESS -i
 abbr L bat
 complete -c bat -a '(__fish_complete_path)'
+export PAGER='bat --plain'
 
 set -x FZF_DEFAULT_OPTS '--height 40% --border --reverse --no-sort'
 
