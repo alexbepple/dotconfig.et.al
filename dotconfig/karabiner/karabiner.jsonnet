@@ -166,19 +166,19 @@ local complexModifications = {
         },
         {
           from: { key_code: 'f3' },
-          to: [{ key_code: 'mission_control' }],
+          to: [{ apple_vendor_keyboard_key_code: 'mission_control' }],
         },
         {
           from: { key_code: 'f4' },
-          to: [{ key_code: 'launchpad' }],
+          to: [{ apple_vendor_keyboard_key_code: 'spotlight' }],
         },
         {
           from: { key_code: 'f5' },
-          to: [{ key_code: 'illumination_decrement' }],
+          to: [{ consumer_key_code: 'dictation' }],
         },
         {
           from: { key_code: 'f6' },
-          to: [{ key_code: 'illumination_increment' }],
+          to: [{ key_code: 'f6' }],
         },
         {
           from: { key_code: 'f7' },
@@ -190,7 +190,7 @@ local complexModifications = {
         },
         {
           from: { key_code: 'f9' },
-          to: [{ consumer_key_code: 'fastforward' }],
+          to: [{ consumer_key_code: 'fast_forward' }],
         },
         {
           from: { key_code: 'f10' },
