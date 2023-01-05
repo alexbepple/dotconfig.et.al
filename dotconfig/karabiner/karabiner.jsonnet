@@ -14,6 +14,22 @@ local from_to(modifierOrModifiers, from, to, optional=['any'],) = {
   })],
 };
 
+// Requirement: combine function keys with modifiers inside IJ
+// Attempt 1: media keys default + function keys with 'frontmost_application_if' did not work, as it did not pass the modifies
+// Attempt 2: function keys as default + media key with 'frontmost_application_unless'
+//   disadvantage vs attempt 1: need to explicitly choose media key
+local outside_intellij(fnKey, mediaKey) = {
+  description: fnKey + ' outside IntelliJ: ' + mediaKey,
+  manipulators: [manipulator({
+    conditions: [{
+      bundle_identifiers: ['com.jetbrains.intellij'],
+      type: 'frontmost_application_unless',
+    }],
+    from: { key_code: fnKey },
+    to: [{ key_code: mediaKey }],
+  })],
+};
+
 local complexModifications = {
   parameters: {
     'basic.simultaneous_threshold_milliseconds': 50,
@@ -30,6 +46,13 @@ local complexModifications = {
     from_to('left_option', 'l', 'right_arrow'),
     from_to('left_option', 'd', 'page_down'),
     from_to('left_option', 'u', 'page_up'),
+
+    outside_intellij('f1', 'display_brightness_decrement'),
+    outside_intellij('f2', 'display_brightness_increment'),
+    outside_intellij('f10', 'mute'),
+    outside_intellij('f11', 'volume_decrement'),
+    outside_intellij('f12', 'volume_increment'),
+
     {
       description: 'Citrix: Left Cmd = Left Alt + Left Cmd (coupled with Citrix setting for Alt)',
       manipulators: [manipulator({
