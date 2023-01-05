@@ -279,33 +279,6 @@
                         ]
                     },
                     {
-                        "description": "Citrix: Left Cmd = Left Alt + Left Cmd (coupled with Citrix setting for Alt)",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.citrix\\.receiver\\.icaviewer\\.mac$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "left_command"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_command",
-                                        "modifiers": [
-                                            "left_option"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "caps_lock => left_option in combination | escape if alone",
                         "manipulators": [
                             {

@@ -1,8 +1,3 @@
-local citrix = {
-  bundle_identifiers: ['^com\\.citrix\\.receiver\\.icaviewer\\.mac$'],
-  type: 'frontmost_application_if',
-};
-
 local manipulator(x) = x { type: 'basic' };
 
 local from_to(modifierOrModifiers, from, to, optional=['any'],) = {
@@ -52,15 +47,6 @@ local complexModifications = {
     outside_intellij('f10', 'mute'),
     outside_intellij('f11', 'volume_decrement'),
     outside_intellij('f12', 'volume_increment'),
-
-    {
-      description: 'Citrix: Left Cmd = Left Alt + Left Cmd (coupled with Citrix setting for Alt)',
-      manipulators: [manipulator({
-        conditions: [citrix],
-        from: { key_code: 'left_command' },
-        to: [{ key_code: 'left_command', modifiers: ['left_option'] }],
-      })],
-    },
 
     /*
      * Simplify typing combinations with option key.
