@@ -1,0 +1,3 @@
+[submodule "dotconfig/mpv/scripts/autosub-mpv"]
+	path = dotconfig/mpv/scripts/autosub-mpv
+	url = https://github.com/alexbepple/autosub-mpv.git
