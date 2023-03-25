@@ -26,23 +26,23 @@ const moveRightKey = new Key('right', [ 'cmd', 'option', 'shift' ], () => {
 
 //////////////////////
 
-const lastActivated = {}
-const touch = (app) => lastActivated[app.bundleIdentifier()] = new Date()
-const _getLastActivatedTsRaw = (app) => lastActivated[app.bundleIdentifier()]
+// const lastActivated = {}
+// const touch = (app) => lastActivated[app.bundleIdentifier()] = new Date()
+// const _getLastActivatedTsRaw = (app) => lastActivated[app.bundleIdentifier()]
 
-const startupTs = new Date()
-const getLastActivatedTs = (app) => _getLastActivatedTsRaw(app) || startupTs
-const wasAppInactiveForLongTime = app => new Date() - getLastActivatedTs(app) > 300/*s*/ * 1000
+// const startupTs = new Date()
+// const getLastActivatedTs = (app) => _getLastActivatedTsRaw(app) || startupTs
+// const wasAppInactiveForLongTime = app => new Date() - getLastActivatedTs(app) > 300/*s*/ * 1000
 
-const hideAppIfUnused = app => {
-  if (!app.isActive() && !app.isHidden() && wasAppInactiveForLongTime(app)) {
-    app.hide()
-  }
-}
+// const hideAppIfUnused = app => {
+//   if (!app.isActive() && !app.isHidden() && wasAppInactiveForLongTime(app)) {
+//     app.hide()
+//   }
+// }
 
-const touchActivatedApp = new Event('appDidActivate', touch)
+// const touchActivatedApp = new Event('appDidActivate', touch)
 
-/* Avoid it disappearing immediately after switching away. */
-const touchActiveApp = Timer.every(15 /*s*/, () => touch(App.focused()))
+// /* Avoid it disappearing immediately after switching away. */
+// const touchActiveApp = Timer.every(15 /*s*/, () => touch(App.focused()))
 
-const hideUnusedApps = Timer.every(15 /*s*/, () => App.all().forEach(hideAppIfUnused))
+// const hideUnusedApps = Timer.every(15 /*s*/, () => App.all().forEach(hideAppIfUnused))
