@@ -51,6 +51,9 @@ end
 abbr ne nix-env
 abbr ns nix-shell
 
+set -x PROTO_HOME $HOME/.proto
+set --prepend PATH $PROTO_HOME/shims:$PROTO_HOME/bin
+
 eval (direnv hook fish)
 
 abbr v vagrant
