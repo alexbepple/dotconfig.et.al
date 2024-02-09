@@ -30,3 +30,8 @@ format = "  via [ tea ]($style)"
 when = """ proto debug env | grep .prototools | grep -v '~/.proto' | grep .prototools """
 style = "bold blue" # like Nix-shell
 format = "  [🔧 proto ]($style)"
+
+[custom.moon]
+when = """ moon --version """
+style = "bold blue" # like Nix-shell
+format = "  [🔧 moon ]($style)"
