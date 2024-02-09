@@ -21,3 +21,8 @@ when = """ test -z "$ASDF_DIR" && test -f .tool-versions """
 style = "bold red" # indicate likely error
 format = "  [ .tool-versions]($style) defined but not used"
 
+[custom.tea_active]
+when = """ test "$TEA_FILES" """
+style = "bold blue" # like Nix-shell
+format = "  via [ tea ]($style)"
+
