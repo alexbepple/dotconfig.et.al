@@ -26,3 +26,7 @@ when = """ test "$TEA_FILES" """
 style = "bold blue" # like Nix-shell
 format = "  via [ tea ]($style)"
 
+[custom.proto]
+when = """ proto debug env | grep .prototools | grep -v '~/.proto' | grep .prototools """
+style = "bold blue" # like Nix-shell
+format = "  [🔧 proto ]($style)"
