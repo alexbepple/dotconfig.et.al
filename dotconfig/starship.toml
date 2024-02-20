@@ -14,24 +14,24 @@ format = "[$symbol$output]($style)"
 [custom.asdf_active]
 when = """ test "$ASDF_DIR" && test -f .tool-versions """
 style = "bold blue" # like Nix-shell
-format = "  [🔧 asdf]($style)"
+format = "[🔧 asdf]($style) "
 
 [custom.asdf_inactive]
 when = """ test -z "$ASDF_DIR" && test -f .tool-versions """
 style = "bold red" # indicate likely error
-format = "  [🔧 .tool-versions]($style) defined but not used"
+format = "[🔧 .tool-versions]($style) defined but not used "
 
 [custom.tea_active]
 when = """ test "$TEA_FILES" """
 style = "bold blue" # like Nix-shell
-format = "  [🔧 tea]($style)"
+format = "[🔧 tea]($style) "
 
 [custom.proto]
 when = """ proto debug env | grep .prototools | grep -v '~/.proto' | grep .prototools """
 style = "bold blue" # like Nix-shell
-format = "  [🔧 proto]($style)"
+format = "[🔧 proto]($style) "
 
 [custom.moon]
 when = """ moon --version """
 style = "bold blue" # like Nix-shell
-format = "  [🔧 moon]($style)"
+format = "[🔧 moon]($style) "
