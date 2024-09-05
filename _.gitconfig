@@ -1,6 +1,10 @@
-# This is Git's per-user configuration file.
 [user]
 name = Alex Bepple
 email = alex@bepple.de
+
 [init]
-	defaultBranch = main
+  defaultBranch = main
+
+[alias]
+  # https://stackoverflow.com/questions/2363197
+  ignored = !git ls-files -v | grep "^[[:lower:]]"
