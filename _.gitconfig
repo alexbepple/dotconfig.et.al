@@ -8,3 +8,5 @@ email = alex@bepple.de
 [alias]
   # https://stackoverflow.com/questions/2363197
   ignored = !git ls-files -v | grep "^[[:lower:]]"
+[core]
+	editor = pkgx hx
