@@ -12,7 +12,7 @@ set --prepend PATH /usr/local/texlive/bin
 
 set --prepend PATH $HOME/.cargo/bin
 
-set --prepend PATH $HOME/computing/dotfiles.et.al/npm/bin
+set --prepend PATH $HOME/computing/dotconfig.et.al/npm/bin
 
 set -x GOPATH $HOME/.go
 set --prepend PATH $GOPATH/bin
