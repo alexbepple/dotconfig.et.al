@@ -3,3 +3,6 @@ focus-lost = true
 
 [editor.cursor-shape]
 insert = "bar"
+
+[keys.normal]
+K = "expand_selection"
