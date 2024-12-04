@@ -1,3 +1,5 @@
+command_timeout = 600
+
 [directory]
 truncation_symbol = "…/"
 
