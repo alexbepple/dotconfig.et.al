@@ -19,5 +19,3 @@ abbr gco git checkout
 
 abbr gp git push
 abbr gpr git pull --rebase
-
-abbr st open -a sourcetree .
