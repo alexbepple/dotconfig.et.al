@@ -16,8 +16,14 @@
     "context": "Editor",
     "bindings": {
       // "j k": ["workspace::SendKeystrokes", "escape"]
+
+      "cmd-b": "editor::GoToDefinition",
+      "cmd-alt-left": "pane::GoBack",
+      "cmd-alt-right": "pane::GoForward",
+
       "cmd-7": "editor::ToggleComments",
       "cmd-y": "editor::DeleteLine",
+
       "alt-up": "editor::SelectLargerSyntaxNode",
       "alt-down": "editor::SelectSmallerSyntaxNode"
     }
