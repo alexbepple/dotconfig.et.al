@@ -4,15 +4,15 @@
 test -d /opt/homebrew && eval (/opt/homebrew/bin/brew shellenv)
 
 # These used to be mainly for Homebrew. But some other apps install CLI helpers there, e.g. Docker.
-set --prepend PATH /usr/local/bin
-set --prepend PATH /usr/local/sbin
+fish_add_path --path /usr/local/bin
+fish_add_path --path /usr/local/sbin
 
-set --prepend PATH $HOME/.cargo/bin
+fish_add_path --path $HOME/.cargo/bin
 
-set --prepend PATH $HOME/computing/dotconfig.et.al/npm/bin
+fish_add_path --path $HOME/computing/dotconfig.et.al/npm/bin
 
 set -x GOPATH $HOME/.go
-set --prepend PATH $GOPATH/bin
+fish_add_path --path $GOPATH/bin
 
 export ERL_AFLAGS="-kernel shell_history enabled"
 
@@ -37,7 +37,7 @@ set -x FZF_DEFAULT_OPTS '--height 40% --border --reverse --no-sort'
 abbr js just
 
 set -x PROTO_HOME $HOME/.proto
-set --prepend PATH $PROTO_HOME/shims:$PROTO_HOME/bin
+fish_add_path --path $PROTO_HOME/shims $PROTO_HOME/bin
 
 eval (direnv hook fish)
 
