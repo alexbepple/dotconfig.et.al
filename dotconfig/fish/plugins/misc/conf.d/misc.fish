@@ -16,9 +16,9 @@ set --prepend PATH $GOPATH/bin
 
 export ERL_AFLAGS="-kernel shell_history enabled"
 
-set exa exa -F
-abbr l $exa
-abbr ll $exa -l
+set eza pkgx eza -F
+abbr l $eza
+abbr ll $eza -l
 
 abbr c code
 abbr c. 'code .'
