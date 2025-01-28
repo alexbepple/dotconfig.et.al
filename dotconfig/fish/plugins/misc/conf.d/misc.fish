@@ -42,6 +42,9 @@ abbr js just
 
 abbr use-asdf source (brew --prefix asdf)/libexec/asdf.fish
 
+set -x PROTO_HOME $HOME/.proto
+abbr use-proto fish_add_path --path $PROTO_HOME/shims $PROTO_HOME/bin
+
 eval (direnv hook fish)
 
 abbr v vagrant
