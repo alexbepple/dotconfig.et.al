@@ -6,3 +6,4 @@ insert = "bar"
 
 [keys.normal]
 K = "expand_selection"
+"space" = { "space" = "command_palette" }
