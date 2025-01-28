@@ -20,8 +20,9 @@ set eza pkgx eza -F
 abbr l $eza
 abbr ll $eza -l
 
-abbr c code
-abbr c. 'code .'
+abbr hx pkgx hx
+abbr z zed
+abbr z. zed .
 abbr ij 'open -na "IntelliJ IDEA.app"'
 abbr ij. 'open -na "IntelliJ IDEA.app" --args (pwd)'
 abbr o open
