@@ -6,34 +6,27 @@ truncation_symbol = "…/"
 [aws]
 disabled = true
 
-[custom.spack]
-symbol = "🔧 "
-style = "bold blue" # like Nix-shell
-command = "echo 'spack'"
-files = ["spack.yaml"]
-format = "[$symbol$output]($style)"
 
-[custom.asdf_active]
-when = """ test "$ASDF_DIR" && test -f .tool-versions """
-style = "bold blue" # like Nix-shell
+[env_var.ASDF_DIR]
+style = "bold blue"
 format = "[🔧 asdf]($style) "
 
 [custom.asdf_inactive]
 when = """ test -z "$ASDF_DIR" && test -f .tool-versions """
 style = "bold red" # indicate likely error
-format = "[🔧 .tool-versions]($style) defined but not used "
+format = "[🔧 .tool-versions]($style) defined, but asdf not active "
 
-[custom.tea_active]
-when = """ test "$TEA_FILES" """
-style = "bold blue" # like Nix-shell
-format = "[🔧 tea]($style) "
 
-[custom.proto]
-when = """ proto debug env | grep .prototools | grep -v '~/.proto' | grep .prototools """
-style = "bold blue" # like Nix-shell
+[env_var.PKGX_LVL]
+style = "bold blue"
+format = "[🔧 pkgx]($style) "
+
+
+[env_var.PROTO_HOME]
+style = "bold blue"
 format = "[🔧 proto]($style) "
 
-[custom.moon]
-when = """ moon --version """
-style = "bold blue" # like Nix-shell
-format = "[🔧 moon]($style) "
+[custom.proto_inactive]
+when = """ test -z "$PROTO_HOME" && test -f .prototools """
+style = "bold red" # indicate likely error
+format = "[🔧 .prototools]($style) defined, but proto not active "
