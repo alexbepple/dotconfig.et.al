@@ -40,6 +40,8 @@ set -x FZF_DEFAULT_OPTS '--height 40% --border --reverse --no-sort'
 
 abbr js just
 
+abbr use-asdf source (brew --prefix asdf)/libexec/asdf.fish
+
 eval (direnv hook fish)
 
 abbr v vagrant
