@@ -3,12 +3,9 @@
 
 test -d /opt/homebrew && eval (/opt/homebrew/bin/brew shellenv)
 
-# do I even need these anymore?
+# These used to be mainly for Homebrew. But some other apps install CLI helpers there, e.g. Docker.
 set --prepend PATH /usr/local/bin
 set --prepend PATH /usr/local/sbin
-
-# and this?
-set --prepend PATH /usr/local/texlive/bin
 
 set --prepend PATH $HOME/.cargo/bin
 
