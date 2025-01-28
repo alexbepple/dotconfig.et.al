@@ -40,9 +40,6 @@ set -x FZF_DEFAULT_OPTS '--height 40% --border --reverse --no-sort'
 
 abbr js just
 
-set -x PROTO_HOME $HOME/.proto
-fish_add_path --path $PROTO_HOME/shims $PROTO_HOME/bin
-
 eval (direnv hook fish)
 
 abbr v vagrant

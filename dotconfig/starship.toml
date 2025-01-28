@@ -22,11 +22,12 @@ style = "bold blue"
 format = "[🔧 pkgx]($style) "
 
 
-[env_var.PROTO_HOME]
+[custom.proto_active]
+when = """ contains /Users/ab/.proto/shims $PATH """
 style = "bold blue"
 format = "[🔧 proto]($style) "
 
 [custom.proto_inactive]
-when = """ test -z "$PROTO_HOME" && test -f .prototools """
+when = """ test -f .prototools && not contains /Users/ab/.proto/shims $PATH """
 style = "bold red" # indicate likely error
 format = "[🔧 .prototools]($style) defined, but proto not active "
