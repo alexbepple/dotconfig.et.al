@@ -203,6 +203,7 @@ local complexModifications = {
         country_code: 0,
         indicate_sticky_modifier_keys_state: true,
         keyboard_type: '',
+        keyboard_type_v2: 'ansi',
         mouse_key_xy_scale: 100,
       },
     },
