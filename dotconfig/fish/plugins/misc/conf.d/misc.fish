@@ -1,7 +1,11 @@
 # set -x LANG en_US.utf8
 # set -x LC_ALL C
 
-test -d /opt/homebrew && eval (/opt/homebrew/bin/brew shellenv)
+if test -d /opt/homebrew
+    # prevent brew init from always putting Homebrew first in the PATH
+    set -l brew_init (/opt/homebrew/bin/brew shellenv | string replace --regex '\-\-move ' '')
+    eval $brew_init
+end
 
 # These used to be mainly for Homebrew. But some other apps install CLI helpers there, e.g. Docker.
 fish_add_path --path /usr/local/bin
