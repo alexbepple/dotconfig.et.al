@@ -1,4 +1,4 @@
 
 @test 'fish loads quickly enough' (
-    gtime -f '%U' fish -c '' 2>&1 | cut -d . -f 2
+    /usr/bin/time -p fish -c '' 2>&1 | grep user | cut -d . -f 2
 ) -lt 10
