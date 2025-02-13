@@ -22,6 +22,7 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 set eza pkgx eza -F
 abbr l $eza
+abbr la $eza -a
 abbr ll $eza -l
 
 abbr hx pkgx hx
