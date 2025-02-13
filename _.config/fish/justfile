@@ -9,7 +9,12 @@ build:
     mkdir {{target}}
     touch {{target}}/__this_is_a_build_artifact__
     cp -R config.fish functions {{target}}
-    fish -c 'fisher add ./plugins/*'
+
+    ## Install plugins
+    # `fisher` no longer installs transitive dependencies. The `cat` mechanism is fragile, but good enough.
+    # Must start new shell so that fish notices the presence of `fisher`.
+    fish -c 'cat plugins/*/fishfile | fisher install'
+    fish -c 'fisher install ./plugins/*'
 
 test:
     fish -c 'fishtape **.test.fish | npx tap-colorize'
