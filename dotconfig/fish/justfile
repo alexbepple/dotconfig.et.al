@@ -1,9 +1,14 @@
 rebuild: clean build test
 
+target := "~/.config/fish"
+
 clean:
-    git clean -Xd -f > /dev/null
+    rm -rf {{target}}
 
 build:
+    mkdir {{target}}
+    touch {{target}}/__this_is_a_build_artifact__
+    cp -R config.fish functions {{target}}
     fish -c 'fisher add ./plugins/*'
 
 test:
