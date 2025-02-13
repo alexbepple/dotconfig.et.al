@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+pkgx +just@1 +node@22 +classic.yarnpkg.com@1 -- $@
