@@ -9,19 +9,19 @@ disabled = true
 
 [env_var.ASDF_DIR]
 style = "bold blue"
-format = "[🔧 asdf]($style) "
+format = " [🔧 asdf]($style)"
 
 [custom.asdf_inactive]
 when = """ test -z "$ASDF_DIR" && test -f .tool-versions """
 shell = ['fish', '--no-config', '--command']
 use_stdin = false
 style = "bold red" # indicate likely error
-format = "[🔧 .tool-versions]($style) defined, but asdf not active "
+format = " [🔧 .tool-versions]($style) defined, but asdf not active"
 
 
 [env_var.PKGX_LVL]
 style = "bold blue"
-format = "[🔧 pkgx]($style) "
+format = " [🔧 pkgx]($style)"
 
 
 [custom.proto_active]
@@ -29,11 +29,11 @@ when = """ contains /Users/ab/.proto/shims $PATH """
 shell = ['fish', '--no-config', '--command']
 use_stdin = false
 style = "bold blue"
-format = "[🔧 proto]($style) "
+format = " [🔧 proto]($style)"
 
 [custom.proto_inactive]
 when = """ test -f .prototools && not contains /Users/ab/.proto/shims $PATH """
 shell = ['fish', '--no-config', '--command']
 use_stdin = false
 style = "bold red" # indicate likely error
-format = "[🔧 .prototools]($style) defined, but proto not active "
+format = " [🔧 .prototools]($style) defined, but proto not active"
