@@ -1,3 +1,8 @@
+[*]
+indent_style = space
+indent_size = 2
+tab_width = 2
+ij_continuation_indent_size = 2
 
 [{*.cjs,*.es6,*.js,*.mjs}]
 ij_javascript_use_semicolon_after_statement = false
