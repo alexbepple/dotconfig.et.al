@@ -10,7 +10,7 @@ function _cd_if_given
 end
 
 function _get_descendants
-    fd . --type d --max-depth 3
+    pkgx fd . --type d --max-depth 3
 end
 
 function _get_ancestors
