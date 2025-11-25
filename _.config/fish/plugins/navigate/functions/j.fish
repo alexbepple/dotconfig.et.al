@@ -30,9 +30,9 @@ function _get_previously_visited
 end
 
 function _j_list_candidates
-    _get_previously_visited
     _get_ancestors
     _get_descendants
+    _get_previously_visited
 end
 
 function j
