@@ -42,6 +42,8 @@ set -x FZF_DEFAULT_OPTS '--height 40% --border --reverse --no-sort'
 abbr js just
 set -x JUST_VERBOSE 1
 
+abbr p pkgx
+
 abbr use-asdf source (brew --prefix asdf)/libexec/asdf.fish
 
 set -x PROTO_HOME $HOME/.proto
