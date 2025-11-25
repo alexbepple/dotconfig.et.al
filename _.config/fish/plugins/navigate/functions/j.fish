@@ -9,7 +9,9 @@ function _cd_if_given
     end
 end
 
-function _get_descendants; fd . --type d --max-depth 3; end
+function _get_descendants
+    fd . --type d --max-depth 3
+end
 
 function _get_ancestors
     function generate_prefixes
@@ -24,7 +26,9 @@ function _get_ancestors
 end
 
 function _get_previously_visited
-    function __extract_paths; awk '{ $1 = ""; print $0 }' | string trim; end
+    function __extract_paths
+        awk '{ $1 = ""; print $0 }' | string trim
+    end
 
     z -l | __extract_paths
 end
@@ -36,8 +40,10 @@ function _j_list_candidates
 end
 
 function j
-    set -l fzf_command fzf -1 
-    if test (count $argv) -gt 0; set --append fzf_command -q $argv; end
-    
+    set -l fzf_command fzf -1
+    if test (count $argv) -gt 0
+        set --append fzf_command -q $argv
+    end
+
     _j_list_candidates | $fzf_command | _cd_if_given
 end
