@@ -33,7 +33,7 @@ abbr ij. 'open -na "IntelliJ IDEA.app" --args (pwd)'
 abbr o open
 
 set -x LESS -i
-abbr L bat
+abbr L pkgx bat
 complete -c bat -a '(__fish_complete_path)'
 export PAGER='bat --plain'
 
