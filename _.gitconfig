@@ -10,9 +10,9 @@ email = alex@bepple.de
   ignored = !git ls-files -v | grep "^[[:lower:]]"
 [core]
 	editor = pkgx hx
-	pager = delta
+	pager = pkgx delta
 [interactive]
-	diffFilter = delta --color-only
+	diffFilter = pkgx delta --color-only
 [delta]
 	navigate = true
 	side-by-side = true
